@@ -1,0 +1,454 @@
+/* ===== GLOBAL STYLES & FONT IMPORTS ===== */
+:root {
+  --color-green-dark: #3a4a20;
+  --color-gold: #f4cd4A;
+  --color-yellow-light: #f6e6a1;
+  --color-white: #FFFFFF;
+  --color-off-white: #f4f7f6;
+  --color-black: #1a1a1a;
+  --magnifier-size: 250px;
+}
+
+body,
+html {
+  font-family: 'Lora', serif;
+  background-color: var(--color-off-white);
+  background-image: linear-gradient(180deg, var(--color-white) 0%, var(--color-off-white) 100%);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.btn-action,
+.chapter-name,
+.accordion-button,
+.btn-nav {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  color: var(--color-black);
+  padding: 0 2rem;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.hero-section .row {
+  min-height: 100vh;
+}
+
+.hero-text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.hero-text-content h1 {
+  font-weight: 900;
+  font-size: clamp(3rem, 7vw, 5rem);
+}
+
+.shimmering-text {
+  background: linear-gradient(90deg, var(--color-green-dark), var(--color-gold), var(--color-green-dark));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  animation: shimmer 5s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: 0% center; }
+}
+
+/* HIGHLIGHT NA GRADIENT (FIXED WRAP ULTIMATE) */
+.highlighted-lead-wrapper {
+  display: block;
+  /* Tinanggal ang max-width: fit-content */
+}
+
+.highlighted-lead {
+  font-family: 'Lora', serif;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: var(--color-black) !important;
+  background-image: linear-gradient(to right, var(--color-yellow-light) 0%, var(--color-gold) 100%);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-style: italic;
+  font-weight: 700;
+  display: inline;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  white-space: normal;
+  line-height: 2.2;
+}
+
+/* ===== SIGNATURE STYLE ===== */
+.signature {
+  font-family: 'Dancing Script', cursive; /* Cursive font */
+  font-weight: 700; /* Mas makapal na stroke */
+  font-size: 1.2rem; /* Laki ng font */
+  color: var(--color-green-dark); /* Kulay */
+  margin-top: -10px; /* Itulak konti pataas para mas malapit sa quote */
+  margin-left: 10px; /* I-indent konti */
+  opacity: 0.9; /* Medyo transparent */
+}
+
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.btn-action {
+  background-color: transparent;
+  border: 2px solid var(--color-green-dark);
+  color: var(--color-green-dark);
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-action:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(58, 74, 32, 0.25);
+  background-color: var(--color-green-dark);
+  color: var(--color-white);
+}
+
+
+/* KANANG PANEL (IMAGE) */
+.hero-image-panel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+/* MALIIT NA BOOKMARK */
+.bookmark-container {
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: crosshair;
+  z-index: 5;
+  animation: simpleFloat 6s ease-in-out infinite;
+}
+
+@keyframes simpleFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* HINDI PUTOL FIX */
+.bookmark-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* BADGES (SIMPLE FLOAT at PWESTO FIXED) */
+.badge-item {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 6;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--color-black);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: simpleFloat 8s ease-in-out infinite alternate;
+}
+
+.badge-item i {
+  color: var(--color-green-dark);
+}
+
+.badge-1 { top: 10%; left: -10%; animation-delay: -2s; transform: scale(0.9); }
+.badge-2 { bottom: 20%; left: -15%; transform: scale(0.9); }
+.badge-3 { top: 25%; right: -15%; animation-delay: -4s; transform: scale(0.9); }
+.badge-4 { bottom: 10%; right: -10%; animation-delay: -1s; transform: scale(0.9); }
+
+/* ===== MAGNIFIER ===== */
+.magnifier {
+  position: absolute;
+  width: var(--magnifier-size);
+  height: var(--magnifier-size);
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border: 5px solid var(--color-white);
+  overflow: hidden;
+  opacity: 0;
+  scale: 0.5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 0.2s ease-out, scale 0.2s ease-out;
+}
+
+.magnifier-image {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../img/bookmark.png');
+}
+
+/* ===== STORY STEPPER (PREV/NEXT) ===== */
+.story-stepper {
+  margin-top: 3rem;
+  background: var(--color-white);
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.controls-title {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.story-display {
+  position: relative;
+  overflow: hidden;
+  height: 120px; /* Fixed height */
+}
+
+.story-text-wrapper {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(0);
+}
+
+.story-text-wrapper.current-story {
+  position: relative;
+  opacity: 1;
+}
+
+.story-display h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--color-black);
+  font-size: 1.3rem;
+}
+
+.story-display p {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.story-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.btn-nav {
+  background: none;
+  border: none;
+  color: var(--color-green-dark);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-nav:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-nav:disabled {
+  color: #ccc;
+  background-color: transparent;
+  cursor: not-allowed;
+}
+
+/* ===== PRINT AREA (NAKATAGO) ===== */
+#print-area {
+  display: none;
+}
+
+/* ===== PRINT STYLES (A4 LANDSCAPE FIX) ===== */
+@media print {
+  body>*:not(.print-only) {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .print-only,
+  .print-only * {
+    visibility: visible !important;
+    display: block !important;
+  }
+  #print-area {
+    position: static !important;
+  }
+
+  @page {
+    size: A4 landscape;
+    margin: 0.5in;
+  }
+  html,
+  body {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: white !important;
+  }
+  .print-page {
+    width: 10.69in;
+    height: 7.27in;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.15in !important;
+    justify-content: center !important;
+    align-content: flex-start !important;
+  }
+  .print-bookmark {
+    width: 2in !important;
+    height: 6in !important;
+    overflow: hidden !important;
+    border: none !important;
+    page-break-inside: avoid !important;
+  }
+  .print-bookmark img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 991.98px) {
+  .hero-section .row {
+    flex-direction: column-reverse;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    min-height: 0;
+  }
+  .hero-image-panel {
+    min-height: 400px;
+    margin-bottom: 2rem;
+  }
+  .hero-text-content {
+    padding: 2rem 0;
+    text-align: center;
+  }
+  .highlighted-lead-wrapper {
+    max-width: 100%;
+    /* Inalis ang text-align: center; */
+  }
+  .highlighted-lead {
+    margin: 1.5rem auto;
+    max-width: 90%;
+    white-space: normal;
+    text-align: center;
+    display: inline-block;
+    line-height: 1.8;
+  }
+
+  /* Style para sa signature sa mobile */
+  .signature {
+      text-align: center; /* I-center ang text */
+      margin-left: 0; /* Alisin ang indent */
+      margin-top: 5px; /* Maglagay ng konting space mula sa quote */
+      font-size: 1.1rem; /* Pinaliit konti */
+  }
+  
+ .action-buttons {
+    justify-content: center; /* Center the items */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding-right: 1.5rem;
+    margin-right: -1.5rem;
+    padding-left: 1.5rem;
+    margin-left: -1.5rem;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+  .action-buttons::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Style para sa icon-only buttons sa mobile */
+  .btn-action {
+    flex-shrink: 0;
+    padding: 0.6rem;
+    width: 40px;
+    height: 40px;
+    gap: 0;
+    justify-content: center;
+  }
+  
+  /* Itago yung text sa loob ng button sa mobile */
+  .btn-action .btn-text {
+      display: none; 
+  }
+
+  /* Siguraduhing tama ang laki ng icon sa mobile */
+  .btn-action i {
+      font-size: 1.2rem;
+      margin: 0;
+  }
+
+  .badge-item { transform: scale(0.85); }
+  .badge-1 { top: 5%; left: 0%; }
+  .badge-2 { bottom: 15%; left: -5%; }
+  .badge-3 { top: 15%; right: -5%; }
+  .badge-4 { bottom: 5%; right: 0%; }
+  
+  :root {
+    --magnifier-size: 150px;
+  }
+  
+  .story-display {
+      height: 130px; 
+  }
+}
