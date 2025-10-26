@@ -1,125 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>The Evolving Reader - Interactive Bookmark</title> <meta name="description" content="Explore 'The Evolving Reader', an interactive bookmark design based on the theme 'Tulay ang Pagbasa sa Bukas na Puno ng Pag-asa'. Designed by Maricel S. Madis.">
-    <meta name="keywords" content="bookmark, interactive, design, evolving reader, pagbasa, pag-asa, Maricel Madis, reading, education">
-    <meta name="author" content="Maricel S. Madis">
-    <link rel="canonical" href="https://bookmark-1.pages.dev/"> <link rel="icon" href="img/mdc.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="img/mdc.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>The Evolving Reader - Interactive Bookmark</title>
+    <meta
+      name="description"
+      content="Explore 'The Evolving Reader', an interactive bookmark design based on the theme 'Tulay ang Pagbasa sa Bukas na Puno ng Pag-asa'. Designed by Maricel S. Madis."
+    />
+    <meta
+      name="keywords"
+      content="bookmark, interactive, design, evolving reader, pagbasa, pag-asa, Maricel Madis, reading, education"
+    />
+    <meta name="author" content="Maricel S. Madis" />
+    <link rel="canonical" href="https://bookmark-1.pages.dev/" />
+    <link rel="icon" href="img/mdc.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/mdc.ico" type="image/x-icon" />
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bookmarks-1.pages.dev/">
+    <meta property="og:url" content="https://bookmarks-1.pages.dev/"> 
     <meta property="og:title" content="The Evolving Reader - Interactive Bookmark">
     <meta property="og:description" content="Explore 'The Evolving Reader', an interactive bookmark design based on the theme 'Tulay ang Pagbasa sa Bukas na Puno ng Pag-asa'.">
-    <meta property="og:image" content="https://bookmark-1.pages.dev/img/og-bookmark.png"> <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://bookmark-1.pages.dev/">
-    <meta property="twitter:title" content="The Evolving Reader - Interactive Bookmark">
-    <meta property="twitter:description" content="Explore 'The Evolving Reader', an interactive bookmark design based on the theme 'Tulay ang Pagbasa sa Bukas na Puno ng Pag-asa'.">
-    <meta property="twitter:image" content="https://bookmark-1.pages.dev/img/og-bookmark.png"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <meta property="og:image" content="https://bookmark-1.pages.dev/img/og-bookmark@0.5x.png"> 
+    <meta property="og:site_name" content="The Evolving Reader"> 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Lora:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <section class="hero-section">
-        <div class="container">
-            <div class="row align-items-center min-vh-100">
+      <div class="container">
+        <div class="row align-items-center min-vh-100">
+          <div class="col-lg-6 col-12 hero-text-content">
+            <h1 class="display-2 shimmering-text" data-animate="fade-in">
+              The Evolving Reader
+            </h1>
 
-                <div class="col-lg-6 col-12 hero-text-content">
-                    
-                    <h1 class="display-2 shimmering-text" data-animate="fade-in">The Evolving Reader</h1>
-                    
-                    <p class="lead my-4 highlighted-lead-wrapper" data-animate="fade-in">
-                        <span class="highlighted-lead">"Tulay ang Pagbasa sa Bukas na Puno ng Pag-asa"</span>
-                    </p>
-                    <p class="signature" data-animate="fade-in">Designed By: Maricel S. Madis</p>
-                    
-                    <div class="action-buttons my-4" data-animate="fade-in">
-                        <button class="btn-action btn-share" id="share-button"><i class="ri-share-forward-line"></i> <span class="btn-text">Share</span></button> 
-                        <a href="img/bookmark.png" download="The-Evolving-Reader-Bookmark.png" class="btn-action btn-download" id="download-button">
-                            <i class="ri-download-2-line"></i> <span class="btn-text">Download</span>
-                        </a>
-                        <button class="btn-action btn-print" id="print-button">
-                            <i class="ri-printer-line"></i> <span class="btn-text">Print (5 copies)</span> </button>
-                    </div>
-                    
-                    <div class="story-stepper" data-animate="fade-in">
-                        <h5 class="controls-title">ANG KWENTO NG BOOKMARK</h5>
-                        <div class="story-display">
-                            <div class="story-text-wrapper current-story"> 
-                                <h4 id="story-title">Kabanata 1: Pundasyon ng Pangarap</h4> 
-                                <p id="story-description">
-                                    Sa murang isipan, ang bawat titik ay binhi. Ang pagbabasa'y dilig sa uhaw na diwa, nagpapatibay ng ugat ng kaalaman. Dito nagsisimula ang paghabi ng mga pangarap, sa mga pahinang kandungan ng musmos na kamalayan. 
-                                </p>
-                            </div>
-                             <div class="story-text-wrapper next-story" style="opacity: 0; position: absolute; top: 0; left: 0; width: 100%;"> 
-                                <h4 id="story-title-next"></h4>
-                                <p id="story-description-next"></p>
-                            </div>
-                        </div>
-                        <div class="story-nav">
-                            <button class="btn-nav" id="story-prev"><i class="ri-arrow-left-s-line"></i> Prev</button>
-                            <button class="btn-nav" id="story-next">Next <i class="ri-arrow-right-s-line"></i></button>
-                        </div>
-                    </div>
-                </div>
+            <p
+              class="lead my-4 highlighted-lead-wrapper"
+              data-animate="fade-in"
+            >
+              <span class="highlighted-lead"
+                >"Tulay ang Pagbasa sa Bukas na Puno ng Pag-asa"</span
+              >
+            </p>
+            <p class="signature" data-animate="fade-in">
+              Designed By: Maricel S. Madis
+            </p>
 
-                <div class="col-lg-6 col-12 hero-image-panel" id="hero-image-panel">
-                    
-                    <div class="bookmark-container" id="bookmark-container">
-                        <img src="img/bookmark.png" alt="The Evolving Reader Bookmark" class="bookmark-image" id="bookmark-image">
-                        
-                        <div class="magnifier" id="magnifier">
-                            <div class="magnifier-image" id="magnifier-image"></div>
-                        </div>
-                    </div>
-
-                    <div class="badge-item badge-1"> <i class="ri-award-line"></i> Original Work </div>
-                    <div class="badge-item badge-2"> <i class="ri-focus-3-line"></i> Thematic Design </div>
-                    <div class="badge-item badge-3"> <i class="ri-printer-line"></i> 300 DPI (Print Ready) </div>
-                    <div class="badge-item badge-4"> <i class="ri-qr-scan-2-line"></i> Interactive QR </div>
-
-                </div>
-
+            <div class="action-buttons my-4" data-animate="fade-in">
+              <button class="btn-action btn-share" id="share-button">
+                <i class="ri-share-forward-line"></i>
+                <span class="btn-text">Share</span>
+              </button>
+              <a
+                href="img/bookmark.png"
+                download="The-Evolving-Reader-Bookmark.png"
+                class="btn-action btn-download"
+                id="download-button"
+              >
+                <i class="ri-download-2-line"></i>
+                <span class="btn-text">Download</span>
+              </a>
+              <button class="btn-action btn-print" id="print-button">
+                <i class="ri-printer-line"></i>
+                <span class="btn-text">Print (5 copies)</span>
+              </button>
             </div>
+
+            <div class="story-stepper" data-animate="fade-in">
+              <h5 class="controls-title">ANG KWENTO NG BOOKMARK</h5>
+              <div class="story-display">
+                <div class="story-text-wrapper current-story">
+                  <h4 id="story-title">Kabanata 1: Pundasyon ng Pangarap</h4>
+                  <p id="story-description">
+                    Sa murang isipan, ang bawat titik ay binhi. Ang pagbabasa'y
+                    dilig sa uhaw na diwa, nagpapatibay ng ugat ng kaalaman.
+                    Dito nagsisimula ang paghabi ng mga pangarap, sa mga
+                    pahinang kandungan ng musmos na kamalayan.
+                  </p>
+                </div>
+                <div
+                  class="story-text-wrapper next-story"
+                  style="
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                  "
+                >
+                  <h4 id="story-title-next"></h4>
+                  <p id="story-description-next"></p>
+                </div>
+              </div>
+              <div class="story-nav">
+                <button class="btn-nav" id="story-prev">
+                  <i class="ri-arrow-left-s-line"></i> Prev
+                </button>
+                <button class="btn-nav" id="story-next">
+                  Next <i class="ri-arrow-right-s-line"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-12 hero-image-panel" id="hero-image-panel">
+            <div class="bookmark-container" id="bookmark-container">
+              <img
+                src="img/bookmark.png"
+                alt="The Evolving Reader Bookmark"
+                class="bookmark-image"
+                id="bookmark-image"
+              />
+
+              <div class="magnifier" id="magnifier">
+                <div class="magnifier-image" id="magnifier-image"></div>
+              </div>
+            </div>
+
+            <div class="badge-item badge-1">
+              <i class="ri-award-line"></i> Original Work
+            </div>
+            <div class="badge-item badge-2">
+              <i class="ri-focus-3-line"></i> Thematic Design
+            </div>
+            <div class="badge-item badge-3">
+              <i class="ri-printer-line"></i> 300 DPI (Print Ready)
+            </div>
+            <div class="badge-item badge-4">
+              <i class="ri-qr-scan-2-line"></i> Interactive QR
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <div id="print-area" class="print-only"> 
-        <div class="print-page">
-            <div class="print-bookmark"><img src="img/bookmark.png" alt="Bookmark 1"></div>
-            <div class="print-bookmark"><img src="img/bookmark.png" alt="Bookmark 2"></div>
-            <div class="print-bookmark"><img src="img/bookmark.png" alt="Bookmark 3"></div>
-            <div class="print-bookmark"><img src="img/bookmark.png" alt="Bookmark 4"></div>
-            <div class="print-bookmark"><img src="img/bookmark.png" alt="Bookmark 5"></div> 
+    <div id="print-area" class="print-only">
+      <div class="print-page">
+        <div class="print-bookmark">
+          <img src="img/bookmark.png" alt="Bookmark 1" />
         </div>
+        <div class="print-bookmark">
+          <img src="img/bookmark.png" alt="Bookmark 2" />
+        </div>
+        <div class="print-bookmark">
+          <img src="img/bookmark.png" alt="Bookmark 3" />
+        </div>
+        <div class="print-bookmark">
+          <img src="img/bookmark.png" alt="Bookmark 4" />
+        </div>
+        <div class="print-bookmark">
+          <img src="img/bookmark.png" alt="Bookmark 5" />
+        </div>
+      </div>
     </div>
-
 
     <div class="toast-container position-fixed top-0 end-0 p-3">
-        <div id="actionToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true"> <div class="d-flex">
-                <div class="toast-body">
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
+      <div
+        id="actionToast"
+        class="toast align-items-center text-bg-success border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body"></div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
         </div>
+      </div>
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    
-    <script src="js/script.js"></script> 
-</body>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
